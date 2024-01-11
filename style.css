@@ -1,10 +1,13 @@
 *{margin:0;padding:0;box-sizing:border-box;}
+
 html
 {
   scroll-behavior:smooth;
   transition:all 0.5s linear;
   font-size: 62.5%;
 }
+
+/*---- navbar start ----*/
 nav
 {
 	z-index:9;
@@ -18,11 +21,13 @@ nav
 	color:white !important;
   font-size: 1.8rem;
 }
-.nav_modified .navbar-brand{
+.nav_modified .navbar-brand
+{
   font-size: 2.5rem;
   font-weight: bold;
 }
-.navbar-toggler span{
+.navbar-toggler span
+{
   font-size: 3rem;
 }
 #sidebar
@@ -36,7 +41,8 @@ nav
   transition: all 0.5s linear;
   overflow: hidden;
 }
-#sidebar .navbar-nav .closebtn{
+#sidebar .navbar-nav .closebtn
+{
   font-size: 5rem !important;
 }
 #sidebar ul
@@ -47,7 +53,8 @@ nav
 {
   padding-top:20px;
 }
-#sidebar ul li a:hover{
+#sidebar ul li a:hover
+{
   background-color: #000 !important;
   color: #fff !important;
   border-radius: 5px;
@@ -59,10 +66,12 @@ nav
   color:#000;
   position: relative;
 }
+
+/*---- hero section start ----*/
 .banner::before
 {
 	width:100%;
-	height:100vh;
+	height:100%;
 	content:"";
 	position:absolute;
 	top:0%;
@@ -148,11 +157,11 @@ nav
   border-radius:100px;
   padding:10px 10px;
 }
+
 /*---- About Section ----*/
 #about 
 {
 	width: 100%;
-  /* height: 100vh; */
   height: 100%;
 }
 .about_content
@@ -163,7 +172,6 @@ nav
   justify-content:center;
   align-items: center;
   padding: 50px auto;
-  /* background-color: aquamarine; */
 }
 #about img
 {
@@ -172,7 +180,8 @@ nav
 	border: 20px solid white;
 	box-shadow:0 0 5px #000,inset 0 0 60px red;
 }
-#about h3{
+#about h3
+{
   font-size: 6rem;
 }
 #about h3:first-letter
@@ -180,30 +189,35 @@ nav
   font-size: 7rem;
 	color:red;
 }
-#about h4{
-  font-size: 4.5rem;;
+#about h4
+{
+  font-size: 4.5rem;
 }
 #about h4:first-line
 {
 	color:red;
 }
-.about_content p{
+.about_content p
+{
   font-size: 2rem;
   text-align: justify;
 }
-/*---- services Section Start ----*/
-@font-face {
+
+/*---- services section start ----*/
+@font-face 
+{
   font-family: 'Paprika';
   src: url('Paprika-Regular.ttf') format('Paprika-Regular.ttf');
   /* Add additional font formats if needed */
 }
-#services{
+#services
+{
   width: 100%;
   height: 100%;
-  /* background-color: aquamarine; */
   padding: 50px auto;
 }
-#services h1{
+#services h1
+{
   font-size: 5rem;
   font-family: 'Paprika';
 }
@@ -212,13 +226,18 @@ nav
   cursor: pointer;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
+.card .card-body
+{
+  margin: 0;
+  padding: 0;
+}
 #services .card:hover
 {
   box-shadow:0 0 2px red;
-  
 }
-#services h3{
-  font-size: 8rem;
+#services h3
+{
+  font-size: 6rem;
   word-spacing: 0.2rem;
   letter-spacing: 0.2rem;
   font-style: italic;
@@ -236,11 +255,38 @@ nav
   margin: auto;
 	border:10px solid #fff;
 }
-#services figure h5{
+#services figure h5
+{
   font-family: 'Paprika';
   font-weight: bold;
 }
-
+.service_content
+{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      font-style: italic;
+      display: grid;
+      place-items:center;
+      opacity: 0;
+      overflow: hidden;
+      box-sizing: border-box;
+      transition: all 0.5s linear ease;
+      background-color: #fff;
+      color: #000;
+}
+.service_content p
+{
+  font-size: 1.8rem;
+  padding: 0 30px;
+}
+#services .card:hover .service_content
+{
+  transform: rotateY(360deg);
+  opacity: 1;
+}
 #git
 {
   width:100%;
@@ -273,6 +319,7 @@ footer h2
 footer h5
 {
   line-height: 1;
+  font-size: 1.8rem;
 }
 footer form 
 {
@@ -359,17 +406,12 @@ footer .bottom_foot p
 {
   cursor: pointer;
 }
-/* @media only screen and (min-width: 768px)
-{
-  #about
-  {
-    width: 100%;
-    height: 100%;
-  }
-} */
+
+/*---- Media Queries Start ----*/
 @media only screen and (max-width: 768px)
 {
-  html{
+  html
+  {
     font-size: 55%;
   }
   .banner::before
@@ -404,15 +446,6 @@ footer .bottom_foot p
   {
     margin: 0 10px;
   }
-  footer h2
-  {
-    color:white;
-    font-size: 1.5rem;
-  }
-  footer h5
-  {
-    font-size:1rem;
-  }
   footer .bottom_foot
   { 
     padding-top:20px 0px;
@@ -420,19 +453,18 @@ footer .bottom_foot p
 }
 @media only screen and (max-width: 576px)
 {
-  html{
+  html
+  {
     font-size: 45%;
   }
 	.banner-content h2
 	{
-		/* font-size:2rem; */
 		text-transform: capitalize;
 		line-height: 60px;
 	}
 	.banner-content h2:first-letter
 	{
 		color:red;
-		/* font-size: 3rem; */
 	}
 	.banner_social_icon
 	{
@@ -447,15 +479,6 @@ footer .bottom_foot p
   {
     margin:10px 0px;
   }
-   footer h2
-  {
-    color:white;
-    font-size: 1.5rem;
-  }
-  footer h5
-  {
-    font-size:0.7rem;
-  }
 	footer .bottom_foot
   { 
     /*padding-top:300px;*/
@@ -464,6 +487,13 @@ footer .bottom_foot p
   {
     margin:0px 20px;
     color:white;
+  }
+}
+@media only screen and (min-width: 1000px) and (max-width: 1200px)
+{
+  #about h4
+  {
+    font-size: 3.7rem;
   }
 }
 @media only screen and (min-width: 200px) and (max-width: 400px)
