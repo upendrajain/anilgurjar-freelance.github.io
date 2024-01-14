@@ -1,11 +1,22 @@
-*{margin:0;padding:0;box-sizing:border-box;}
+@font-face 
+{
+  font-family: 'Lato';
+  src: url('Lato-Light.ttf') format('Lato-Light.ttf');
+}
+@font-face 
+{
+  font-family: 'Paprika';
+  src: url('Paprika-Regular.ttf') format('Paprika-Regular.ttf');
+  /* Add additional font formats if needed */
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family: "Lato"; font-weight: 700;}
 
 html
 {
   scroll-behavior:smooth;
   transition:all 0.5s linear;
   font-size: 62.5%;
-  font-family: "Roboto", Arial, sans-serif;
+
 }
 
 /*---- navbar start ----*/
@@ -98,6 +109,7 @@ nav
 {
 	font-size: 3rem;
 	mix-blend-mode:multiply;
+  font-weight: 900;
 }
 .banner-content h1:first-letter
 {
@@ -109,6 +121,7 @@ nav
 	font-size: 7rem;
 	text-transform: capitalize;
 	line-height: 60px;
+  font-weight: 900;
 }
 .banner-content h2:first-letter
 {
@@ -184,6 +197,7 @@ nav
 #about h3
 {
   font-size: 6rem;
+  font-weight: 900;
 }
 #about h3:first-letter
 {
@@ -202,15 +216,10 @@ nav
 {
   font-size: 2rem;
   text-align: justify;
+  font-weight: 400;
 }
 
 /*---- services section start ----*/
-@font-face 
-{
-  font-family: 'Paprika';
-  src: url('Paprika-Regular.ttf') format('Paprika-Regular.ttf');
-  /* Add additional font formats if needed */
-}
 #services
 {
   width: 100%;
@@ -224,6 +233,7 @@ nav
 {
   font-size: 6rem;
   font-family: 'Paprika';
+  font-weight: 900;
 }
 #services .card
 {
@@ -315,6 +325,7 @@ footer h1
 {
   color:red;
   font-size: 5rem;
+  font-weight: 900;
 }
 footer h2
 {
@@ -382,6 +393,7 @@ footer icon h6
   font-size: 1.8rem;
   margin-top: 10px;
   color:red;
+  font-weight: bold;
 }
 footer .address p
 {
@@ -396,6 +408,7 @@ footer .bottom_foot
 footer .bottom_foot p
 {
   font-size: 2rem;
+  font-weight: 400;
 }
 .footer_social_icon
 {
